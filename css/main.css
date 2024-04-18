@@ -1,3 +1,8 @@
+/* Reorganized CSS file and added basic documentation.
+Fixed links to open in new window */
+
+/* Main layout elements - body, header, aside, nav, main and footer
+Uses grid layout */
 body {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -6,13 +11,12 @@ body {
         "aside main"
         "footer footer"
     ;
-    background-attachment: fixed;
     background-image: url("../img/roses.jpg");
     background-size: cover;
     background-attachment: fixed;
     font-family: Helvetica, sans-serif;
+    color: black;
 }
-
 
 header {
     grid-area: header;
@@ -25,6 +29,36 @@ header {
     padding: 30px;
 }
 
+aside {
+    grid-area: aside;
+    align-self: start;
+    padding: 15px;
+    position: sticky;
+    top: 1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+main {
+    grid-area: main;
+    border-left: 3px solid white;
+    padding: 25px;
+    background-color: rgb(252, 222, 227);
+}
+
+footer {
+    grid-area: footer;
+    padding: 15px;
+    border-top: 7px solid rgba(188, 34, 72, 0.862);
+    color: white;
+    line-height: 1.6;
+}
+
+/* Styling for header */
 #logo {
     width: 100px;
     height: 100px;
@@ -32,14 +66,6 @@ header {
     justify-self: end;
     border: 1px solid black;
     box-shadow: 6px 9px #550202
-}
-
-img {
-    box-shadow: 5px 5px #888888
-}
-
-h2 {
-    font-family: Papyrus, cursive;
 }
 
 #title {
@@ -50,22 +76,15 @@ h2 {
     font-family: "Lucida Handwriting", cursive;
 }
 
-
-aside {
-    grid-area: aside;
-    align-self: start;
-    padding: 15px;
-    position: sticky;
-    top: 1rem;
+h2 {
+    font-family: Papyrus, cursive;
 }
 
-
-nav {
-    display: flex;
-    flex-direction: column;
-    line-height: 1.6;
+#light {
+    display: none;
 }
 
+/* Link styling */
 nav>div>a:link,
 nav>div>a:visited,
 footer>a:link,
@@ -73,23 +92,7 @@ footer>a:visited {
     color: white;
 }
 
-main {
-    grid-area: main;
-    border-left: 3px solid white;
-    padding: 25px;
-    background-color: rgb(252, 222, 227);
-}
-
-
-footer {
-    grid-area: footer;
-    padding: 15px;
-    border-top: 7px solid rgba(188, 34, 72, 0.862);
-    color: white;
-    line-height: 1.6;
-
-}
-
+/* Image styling */
 .page>img {
     justify-self: center;
     border: 3px solid black;
@@ -97,7 +100,6 @@ footer {
     align-self: start;
     max-width: fit-content;
     height: auto;
-
 }
 
 .figwrap {
@@ -110,8 +112,6 @@ footer {
     display: block;
     width: 100%;
     max-width: 500px;
-
-
 }
 
 figure>img {
@@ -125,6 +125,17 @@ figure>img {
     padding: 20px;
 }
 
+iframe {
+    border: 3px solid black;
+    box-shadow: 5px 5px #888888
+}
+
+img {
+    box-shadow: 5px 5px #888888
+}
+
+
+/* Different main sections and their layout */
 #home {
     display: flex;
     flex-direction: row;
@@ -132,61 +143,59 @@ figure>img {
     flex-wrap: wrap;
 }
 
-
-#introduction {
-    grid-area: intro;
-    order: 1;
-    width: 50%;
-}
-
-#introduction_pic {
-    grid-area: intro_pic;
-    order: 2;
-    width: 40%;
-}
-
-#history {
-    grid-area: history;
-    order: 4;
-    width: 40%;
-}
-
-#history_pic {
-    grid-area: history_pic;
-    order: 3;
-    width: 50%;
-}
-
-#technique {
-    grid-area: technique;
-    order: 5;
-    width: 50%;
-}
-
-#technique_pic {
-    grid-area: technique_pic;
-    order: 6;
-    width: 40%;
-}
-
-#anatomy {
-    grid-area: anatomy;
-    order: 8;
-    width: 40%;
-}
-
-#anatomy_pic {
-    grid-area: anatomy_pic;
-    order: 7;
-    width: 50%;
-}
-
-
 #types {
     display: none;
     flex-direction: row;
     justify-content: left;
     flex-wrap: wrap;
+}
+
+#music {
+    display: none;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+/* Elements inside main */
+#introduction {
+    order: 1;
+    width: 50%;
+}
+
+#introduction_pic {
+    order: 2;
+    width: 40%;
+}
+
+#history {
+    order: 4;
+    width: 40%;
+}
+
+#history_pic {
+    order: 3;
+    width: 50%;
+}
+
+#technique {
+    order: 5;
+    width: 50%;
+}
+
+#technique_pic {
+    order: 6;
+    width: 40%;
+}
+
+#anatomy {
+    order: 8;
+    width: 40%;
+}
+
+#anatomy_pic {
+    order: 7;
+    width: 50%;
 }
 
 #folk {
@@ -229,15 +238,6 @@ figure>img {
     width: 50%;
 }
 
-
-
-#music {
-    display: none;
-    flex-direction: row;
-    justify-content: left;
-    flex-wrap: wrap;
-}
-
 #music_title {
     width: 100%;
     order: 1;
@@ -267,15 +267,10 @@ figure>img {
     order: 6;
 }
 
-iframe {
-    border: 3px solid black;
-    box-shadow: 5px 5px #888888
-}
 
-
+/* tablet screen-size layout */
 @media only screen and (max-width: 800px) {
     body {
-        display: grid;
         grid-template-areas:
             "header header"
             "aside aside"
@@ -290,7 +285,6 @@ iframe {
 
     aside {
         border-bottom: 3px solid white;
-        /* border-bottom: 7px solid rgba(188, 34, 72, 0.862); */
         position: static;
     }
 
@@ -356,4 +350,17 @@ iframe {
     #electric_pic {
         order: 9;
     }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "aside aside"
+            "main main"
+            "footer footer"
+        ;
+    }
+
+
 }

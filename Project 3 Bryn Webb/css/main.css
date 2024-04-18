@@ -1,0 +1,359 @@
+body {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer"
+    ;
+    background-attachment: fixed;
+    background-image: url("../img/roses.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: Helvetica, sans-serif;
+}
+
+
+header {
+    grid-area: header;
+    padding: 15px;
+    border-bottom: 7px solid rgba(188, 34, 72, 0.862);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+    padding: 30px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+    justify-self: end;
+    border: 1px solid black;
+    box-shadow: 6px 9px #550202
+}
+
+img {
+    box-shadow: 5px 5px #888888
+}
+
+h2 {
+    font-family: Papyrus, cursive;
+}
+
+#title {
+    height: 100px;
+}
+
+#title>h1 {
+    font-family: "Lucida Handwriting", cursive;
+}
+
+
+aside {
+    grid-area: aside;
+    align-self: start;
+    padding: 15px;
+    position: sticky;
+    top: 1rem;
+}
+
+
+nav {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.6;
+}
+
+nav>div>a:link,
+nav>div>a:visited,
+footer>a:link,
+footer>a:visited {
+    color: white;
+}
+
+main {
+    grid-area: main;
+    border-left: 3px solid white;
+    padding: 25px;
+    background-color: rgb(252, 222, 227);
+}
+
+
+footer {
+    grid-area: footer;
+    padding: 15px;
+    border-top: 7px solid rgba(188, 34, 72, 0.862);
+    color: white;
+    line-height: 1.6;
+
+}
+
+.page>img {
+    justify-self: center;
+    border: 3px solid black;
+    margin: 20px;
+    align-self: start;
+    max-width: fit-content;
+    height: auto;
+
+}
+
+.figwrap {
+    margin: auto;
+    margin-left: 0%;
+    margin-top: 20px;
+}
+
+.figwarp img {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+
+
+}
+
+figure>img {
+    border: 3px solid black;
+    align-self: start;
+    max-width: fit-content;
+    height: auto;
+}
+
+.page>section {
+    padding: 20px;
+}
+
+#home {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+
+#introduction {
+    grid-area: intro;
+    order: 1;
+    width: 50%;
+}
+
+#introduction_pic {
+    grid-area: intro_pic;
+    order: 2;
+    width: 40%;
+}
+
+#history {
+    grid-area: history;
+    order: 4;
+    width: 40%;
+}
+
+#history_pic {
+    grid-area: history_pic;
+    order: 3;
+    width: 50%;
+}
+
+#technique {
+    grid-area: technique;
+    order: 5;
+    width: 50%;
+}
+
+#technique_pic {
+    grid-area: technique_pic;
+    order: 6;
+    width: 40%;
+}
+
+#anatomy {
+    grid-area: anatomy;
+    order: 8;
+    width: 40%;
+}
+
+#anatomy_pic {
+    grid-area: anatomy_pic;
+    order: 7;
+    width: 50%;
+}
+
+
+#types {
+    display: none;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+#folk {
+    order: 2;
+    width: 50%;
+}
+
+#folk_pic {
+    order: 3;
+    width: 40%;
+}
+
+#welsh {
+    order: 5;
+    width: 40%;
+}
+
+#welsh_pic {
+    order: 4;
+    width: 50%;
+}
+
+#pedal {
+    order: 6;
+    width: 50%;
+}
+
+#pedal_pic {
+    order: 7;
+    width: 40%;
+}
+
+#electric {
+    order: 9;
+    width: 40%;
+}
+
+#electric_pic {
+    order: 8;
+    width: 50%;
+}
+
+
+
+#music {
+    display: none;
+    flex-direction: row;
+    justify-content: left;
+    flex-wrap: wrap;
+}
+
+#music_title {
+    width: 100%;
+    order: 1;
+}
+
+#music>section {
+    width: 100%;
+}
+
+#baroque {
+    order: 4;
+}
+
+#danses {
+    order: 3;
+}
+
+#contemplation {
+    order: 2;
+}
+
+#celtic {
+    order: 5;
+}
+
+#more {
+    order: 6;
+}
+
+iframe {
+    border: 3px solid black;
+    box-shadow: 5px 5px #888888
+}
+
+
+@media only screen and (max-width: 800px) {
+    body {
+        display: grid;
+        grid-template-areas:
+            "header header"
+            "aside aside"
+            "main main"
+            "footer footer"
+        ;
+    }
+
+    main {
+        border-left: none;
+    }
+
+    aside {
+        border-bottom: 3px solid white;
+        /* border-bottom: 7px solid rgba(188, 34, 72, 0.862); */
+        position: static;
+    }
+
+    #menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+
+    #home {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+
+    #types,
+    #music {
+        display: none;
+        flex-direction: row;
+        justify-content: left;
+        flex-wrap: wrap;
+    }
+
+    #home>img,
+    #home>section,
+    #home>div,
+    #types>img,
+    #types>section {
+        width: auto;
+    }
+
+
+    #history {
+        order: 3;
+    }
+
+    #history_pic {
+        order: 4;
+    }
+
+    #anatomy {
+        order: 7;
+    }
+
+    #anatomy_pic {
+        order: 8;
+    }
+
+    #welsh {
+        order: 4;
+    }
+
+    #welsh_pic {
+        order: 5;
+    }
+
+    #electric {
+        order: 8;
+    }
+
+    #electric_pic {
+        order: 9;
+    }
+}

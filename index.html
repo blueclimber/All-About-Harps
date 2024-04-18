@@ -27,7 +27,7 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 <html lang="en">
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<body>
+<body id="body">
 
     <head>
         <title>
@@ -35,9 +35,10 @@ my js code. That was frustrating to debug, but nice once it was fixed.
         </title>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/main.js"></script>
+        <!-- <link rel="stylesheet" href="css/darkMode.css" id="darkMode"> -->
     </head>
 
-    <header>
+    <header id="header">
         <div id="title">
             <h1>All About Harps</h1>
             <p>Everything you never knew you wanted to know about the harp</p>
@@ -46,7 +47,6 @@ my js code. That was frustrating to debug, but nice once it was fixed.
     </header>
 
     <aside>
-
         <nav id="menu">
             <div><a href=#title onclick="homeButton()" class="home_link">Home</a></div>
             <div><a href=#title onclick="typesButton()" class="types_link">Types of Harps</a></div>
@@ -59,10 +59,13 @@ my js code. That was frustrating to debug, but nice once it was fixed.
         Contact Us<br>
         email: brynellenwebb@gmail.com<br>
         <a href=#title onclick="homeButton()" class="home_link">Home</a> | <a href=#title onclick="typesButton()"
-            class="types_link">Types of Harps</a> | <a href=#title onclick="musicButton()" class="music_link">Music</a>
+            class="types_link">Types of Harps</a> | <a href=#title onclick="musicButton()"
+            class="music_link">Music</a><br>
+        <a href="#title" id="light" onclick="removeDarkMode()">Light Mode</a>
+        <a href="#title" id="dark" onclick="addDarkMode()">Dark Mode</a>
     </footer>
 
-    <main>
+    <main id="main">
         <section id="home" class="page">
             <section id="introduction">
                 <h2>Introduction</h2>
@@ -93,10 +96,10 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     in
                     logos, including in Ireland.
 
-                    Historically, strings were made of sinew (animal tendons).[2][3] Other materials have included
+                    Historically, strings were made of sinew (animal tendons). Other materials have included
                     gut
-                    (animal intestines),[4] plant fiber,[4] braided hemp,[5] cotton cord,[6] silk,[7] nylon,[8] and
-                    wire.[9] <a href="https://en.wikipedia.org/wiki/Harp">wikipedia Harp</a>
+                    (animal intestines), plant fiber, braided hemp, cotton cord, silk, nylon, and
+                    wire. <a href="https://en.wikipedia.org/wiki/Harp" target="_blank">wikipedia.org/wiki/Harp</a>
                 </p>
             </section>
 
@@ -152,10 +155,10 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     3000 BCE. The instrument had great popularity in Europe during the Middle Ages and Renaissance,
                     where it evolved into a wide range of variants with new technologies, and was disseminated to
                     Europe's colonies, finding particular popularity in Latin America.
-                    <cite>https://en.wikipedia.org/wiki/Harp</cite>
+                    <a href=https://en.wikipedia.org/wiki/Harp target="_blank">wikipedia.org/wiki/Harp</a>
                 </p>
                 <p>
-                    According to <cite>https://en.wikipedia.org/wiki/Harp</cite>, the earliest harps
+                    According to <cite>Wikipedia</cite>, the earliest harps
                     were found in Sumer in 3500 BCE, with the earliest visual depictions of a harp
                     being found in Egypt dated as early as 3000 BCE.
                 </p>
@@ -235,7 +238,7 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             </section>
 
-            <img id="introduction_pic" src="img/bryn2.jpg" alt="Bryn plays the harp">
+            <img id="introduction_pic" src="img/bryn.jpg" alt="Bryn plays the harp">
             <img id="technique_pic" src="img/chanson.jpg"
                 alt="A page of the piece Chanson dans la nuit byCarlos Salzado">
             <div class="figwrap" id="anatomy_pic">
@@ -243,7 +246,8 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     <img src="img/parts-of-a-harp.jpg" alt="A visual guide to the parts of a harp">
                     <figcaption>
                         Anatomy of a harp
-                        <br><a href="https://hellomusictheory.com/learn/parts-of-the-harp/">hellomusictheory.com</a>
+                        <br><a href="https://hellomusictheory.com/learn/parts-of-the-harp/"
+                            target="_blank">hellomusictheory.com</a>
                     </figcaption>
                 </figure>
             </div>
@@ -254,7 +258,8 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                         alt="David playing the harp before Saul https://www.artic.edu/artworks/138156/david-playing-the-harp-before-saul">
                     <figcaption>
                         David Playing the Harp Before Saul
-                        <br><a href="https://www.artic.edu/artworks/138156/david-playing-the-harp-before-saul">Art
+                        <br><a href="https://www.artic.edu/artworks/138156/david-playing-the-harp-before-saul"
+                            target="_blank">Art
                             Institue
                             of Chicago</a>
                     </figcaption>
@@ -284,7 +289,8 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     the scale (like the white keys on the piano).
                     The inner row is tuned to be the shraps and flats (like the plack keys
                     on the piano). This image is from an article by the
-                    <a href="https://www.metmuseum.org/art/collection/search/501665">Metropolitan Museum of Art</a>
+                    <a href="https://www.metmuseum.org/art/collection/search/501665" target="_blank">Metropolitan Museum
+                        of Art</a>
                 </p>
                 <p>
                     Unlike many other types of harps, the
@@ -338,9 +344,11 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     and plug in to an amp.
                 </p>
                 <p>
-                    You can learn more about jazz harp at <a href="https://www.hipharp.com/">hiphop.com</a> and
+                    You can learn more about jazz harp at <a href="https://www.hipharp.com/"
+                        target="_blank">hiphop.com</a> and
                     can see Deborah Henson-Conant in action on her <a
-                        href="https://www.youtube.com/channel/UC-72YgVa11J-Xgp9A2v98fg">youtube</a> channel.
+                        href="https://www.youtube.com/channel/UC-72YgVa11J-Xgp9A2v98fg" target="_blank">youtube</a>
+                    channel.
                 </p>
             </section>
 
@@ -348,9 +356,10 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                 <figure>
                     <img src="img/salvi_pedal.jpg" alt="Salvi Iris Pedal Harp">
                     <figcaption>
-                        <a
-                            href="https://www.vermontviolins.com/harps-1/salvi-iris-natural-professional-pedal-harps?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oKeQExAHGdaO7iWULA9wkdbRRGPfHJlSx_A9XyZDeyEQq6LhjxpirBoC480QAvD_BwE">Salvi
-                            Iris</a>
+                        <a href="https://www.vermontviolins.com/harps-1/salvi-iris-natural-professional-pedal-harps?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oKeQExAHGdaO7iWULA9wkdbRRGPfHJlSx_A9XyZDeyEQq6LhjxpirBoC480QAvD_BwE"
+                            target="_blank">
+                            Salvi Iris
+                        </a>
                     </figcaption>
                 </figure>
             </div>
@@ -359,9 +368,10 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                 <figure>
                     <img src="img/rees_celtic.jpg" alt="Rees Shalyee Meadows Folk harp">
                     <figcaption>
-                        <a
-                            href="https://www.vermontviolins.com/harps-1/rees-shaylee-meadows-harp-30-strings?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oCloJsJ4V5a1Dkze7Ki-8AnBRFUqM4pf0MJp4e0V0MK37-A4Y0Pg5BoCfkAQAvD_BwE">Rees
-                            Shalee Meadows</a>
+                        <a href="https://www.vermontviolins.com/harps-1/rees-shaylee-meadows-harp-30-strings?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oCloJsJ4V5a1Dkze7Ki-8AnBRFUqM4pf0MJp4e0V0MK37-A4Y0Pg5BoCfkAQAvD_BwE"
+                            target="_blank">
+                            Rees Shalee Meadows
+                        </a>
                     </figcaption>
                 </figure>
             </div>
@@ -369,19 +379,23 @@ my js code. That was frustrating to debug, but nice once it was fixed.
             <div class="figwrap" id="welsh_pic">
                 <figure>
                     <img src="img/welsh.jpg" alt="Close up of the Welsh triple harp">
-                    <figcaption><a href="https://www.metmuseum.org/art/collection/search/501665">Welsh Triple Harp
-                            at
-                            the
-                            Met</a></figcaption>
+                    <figcaption>
+                        <a href="https://www.metmuseum.org/art/collection/search/501665" target="_blank">
+                            Welsh Triple Harp at the Met
+                        </a>
+                    </figcaption>
                 </figure>
             </div>
 
             <div class="figwrap" id="electric_pic">
                 <figure>
                     <img src="img/dhc_electric.jpg" alt="Blue electric harp">
-                    <figcaption><a
-                            href="https://www.pacificatlanticharps.com/index.php/harps/electric-harps/item/21-camac-dhc-32-blue-light">DHC
-                            Electric Harp</a></figcaption>
+                    <figcaption>
+                        <a href="https://www.pacificatlanticharps.com/index.php/harps/electric-harps/item/21-camac-dhc-32-blue-light"
+                            target="_blank">
+                            DHC Electric Harp
+                        </a>
+                    </figcaption>
                 </figure>
 
             </div>
@@ -479,11 +493,8 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                 </p>
             </section>
 
-
         </section>
 
     </main>
-
-
 
 </body>

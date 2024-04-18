@@ -1,0 +1,58 @@
+/* dark mode */
+/* changed layout */
+
+#body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer"
+    ;
+}
+
+#header {
+    background-color: rgb(18, 13, 13);
+    color: white;
+}
+
+section>img,
+section>iframe,
+figure>img {
+    box-shadow: 5px 5px #e59bb5;
+}
+
+#main {
+    background-color: rgb(18, 13, 13);
+    color: #e59bb5;
+    border-left: none;
+    border-right: 3px solid white;
+}
+
+section>p>a {
+    color: white;
+}
+
+figcaption>a {
+    color: aliceblue;
+}
+
+header>#logo {
+    box-shadow: 10px 10px #a05771;
+}
+
+@media only screen and (max-width: 800px) {
+    #body {
+        grid-template-areas:
+            "aside aside"
+            "header header"
+            "main main"
+            "footer footer"
+        ;
+    }
+
+    #main {
+        border-right: none;
+    }
+}
