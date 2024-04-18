@@ -1,5 +1,12 @@
-/* Reorganized CSS file and added basic documentation.
-Fixed links to open in new window */
+/* 
+Updates to CSS file:
+-Reorganized CSS file and added basic documentation.
+-Added media for smaller screens - this adjusted the layout
+slightly, and changed font size in the header so that the text 
+would stay in the header window. 
+*/
+
+
 
 /* Main layout elements - body, header, aside, nav, main and footer
 Uses grid layout */
@@ -353,6 +360,7 @@ img {
     }
 }
 
+/* phone screen-size layout */
 @media only screen and (max-width: 500px) {
     body {
         grid-template-columns: 4fr;

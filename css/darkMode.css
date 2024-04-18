@@ -1,5 +1,11 @@
-/* dark mode */
-/* changed layout */
+/* 
+New mode:
+-dark mode - changes all of the background colors, font colors, and 
+font family, as well as shadow colors
+-changed layout so that aside is on the right side instead of left
+in large screens, and at the very top instead of under the header
+in small screens
+*/
 
 #body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -42,7 +48,7 @@ header>#logo {
     box-shadow: 10px 10px #a05771;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 920px) {
     #body {
         grid-template-areas:
             "aside aside"

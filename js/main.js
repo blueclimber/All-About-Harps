@@ -1,3 +1,6 @@
+// Changes to JS:
+// -new functions for toggling between normal mode and dark mode
+
 function addDarkMode() {
     var link = document.createElement("link");
     link.type = "text/css";
