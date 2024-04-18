@@ -269,7 +269,7 @@ img {
 
 
 /* tablet screen-size layout */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 920px) {
     body {
         grid-template-areas:
             "header header"
@@ -287,6 +287,7 @@ img {
         border-bottom: 3px solid white;
         position: static;
     }
+
 
     #menu {
         display: flex;
@@ -352,15 +353,21 @@ img {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
     body {
         grid-template-areas:
-            "header header"
-            "aside aside"
-            "main main"
-            "footer footer"
+            "header"
+            "aside"
+            "main"
+            "footer"
         ;
     }
 
+    #title>h1 {
+        font-size: large
+    }
 
+    #title>p {
+        font-size: medium;
+    }
 }

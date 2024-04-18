@@ -35,7 +35,6 @@ my js code. That was frustrating to debug, but nice once it was fixed.
         </title>
         <link rel="stylesheet" href="css/main.css">
         <script src="js/main.js"></script>
-        <!-- <link rel="stylesheet" href="css/darkMode.css" id="darkMode"> -->
     </head>
 
     <header id="header">
@@ -43,7 +42,8 @@ my js code. That was frustrating to debug, but nice once it was fixed.
             <h1>All About Harps</h1>
             <p>Everything you never knew you wanted to know about the harp</p>
         </div>
-        <img id="logo" src="img/harp2.jpg" alt="Harp logo">
+        <img id="logo" src="img/harp2.jpg" alt="Harp logo" sizes=" (min-width: 500px) 30vw, 
+                    40vw" srcset="img/harp2_small.jpg">
     </header>
 
     <aside>
@@ -238,12 +238,23 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             </section>
 
-            <img id="introduction_pic" src="img/bryn.jpg" alt="Bryn plays the harp">
-            <img id="technique_pic" src="img/chanson.jpg"
-                alt="A page of the piece Chanson dans la nuit byCarlos Salzado">
+            <img id="introduction_pic" src="img/bryn400.jpg" sizes=" (min-width: 700px) 40vw,
+                        (min-width: 500px) 75vw,
+                        95vw" srcset="img/bryn200.jpg 200w,
+                        img/bryn400.jpg 400w,
+                        img/bryn.jpg 500w" alt="Bryn plays the harp">
+            <img id="technique_pic" src="img/chanson400.jpg" sizes=" (min-width: 700px) 40vw,
+                        (min-width: 500px) 75vw, 
+                        95vw" srcset="img/chanson200.jpg 200w, 
+                        img/chanson400.jpg 400w, 
+                        img/chanson.jpg 500w" alt="A page of the piece Chanson dans la nuit byCarlos Salzado">
             <div class="figwrap" id="anatomy_pic">
                 <figure>
-                    <img src="img/parts-of-a-harp.jpg" alt="A visual guide to the parts of a harp">
+                    <img src="img/parts400.jpg" sizes=" (min-width: 700px) 40vw,
+                            (min-width: 500px) 75vw, 
+                            95vw" srcset="img/parts200.jpg 200w, 
+                            img/parts400.jpg 400w,
+                            img/parts-of-a-harp.jpg 500w" alt="A visual guide to the parts of a harp">
                     <figcaption>
                         Anatomy of a harp
                         <br><a href="https://hellomusictheory.com/learn/parts-of-the-harp/"
@@ -254,7 +265,11 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             <div class="figwrap" id="history_pic">
                 <figure>
-                    <img src="img/david.jpg"
+                    <img src="img/david400.jpg" sizes=" (min-width: 700px) 40vw,
+                                (min-width: 500px) 75vw, 
+                                95vw" srcset="img/david200.jpg 200w, 
+                                img/david400.jpg 400w, 
+                                img/david.jpg 500w"
                         alt="David playing the harp before Saul https://www.artic.edu/artworks/138156/david-playing-the-harp-before-saul">
                     <figcaption>
                         David Playing the Harp Before Saul
@@ -354,7 +369,11 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             <div class="figwrap" id="pedal_pic">
                 <figure>
-                    <img src="img/salvi_pedal.jpg" alt="Salvi Iris Pedal Harp">
+                    <img src="img/salvi_pedal400.jpg" sizes=" (min-width: 700px) 40vw,
+                                (min-width: 500px) 75vw,
+                                95vw" srcset="img/salvi_pedal200.jpg 200w, 
+                                img/salvi_pedal400.jpg 400w,
+                                img/salvi_pedal.jpg 500w" alt="Salvi Iris Pedal Harp">
                     <figcaption>
                         <a href="https://www.vermontviolins.com/harps-1/salvi-iris-natural-professional-pedal-harps?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oKeQExAHGdaO7iWULA9wkdbRRGPfHJlSx_A9XyZDeyEQq6LhjxpirBoC480QAvD_BwE"
                             target="_blank">
@@ -366,7 +385,11 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             <div class="figwrap" id="folk_pic">
                 <figure>
-                    <img src="img/rees_celtic.jpg" alt="Rees Shalyee Meadows Folk harp">
+                    <img src="img/rees_celtic400.jpg" sizes=" (min-width: 700px) 40vw,
+                                (min-width: 500px) 75vw,
+                                95vw" srcset="img/rees_celtic200.jpg 200w,
+                                img/rees_celtic400.jpg 400w,
+                                img/rees_celtic.jpg 500w" alt="Rees Shalyee Meadows Folk harp">
                     <figcaption>
                         <a href="https://www.vermontviolins.com/harps-1/rees-shaylee-meadows-harp-30-strings?gad_source=1&gclid=CjwKCAjwzN-vBhAkEiwAYiO7oCloJsJ4V5a1Dkze7Ki-8AnBRFUqM4pf0MJp4e0V0MK37-A4Y0Pg5BoCfkAQAvD_BwE"
                             target="_blank">
@@ -378,7 +401,11 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             <div class="figwrap" id="welsh_pic">
                 <figure>
-                    <img src="img/welsh.jpg" alt="Close up of the Welsh triple harp">
+                    <img src="img/welsh2_400.jpg" sizes=" (min-width: 700px) 40vw,
+                                (min-width: 500px) 75vw,
+                                95vw" srcset="img/welsh2_200.jpg 200w,
+                                img/welsh2_400.jpg 400w, 
+                                img/welsh.jpg 500w" alt="Close up of the Welsh triple harp">
                     <figcaption>
                         <a href="https://www.metmuseum.org/art/collection/search/501665" target="_blank">
                             Welsh Triple Harp at the Met
@@ -389,7 +416,11 @@ my js code. That was frustrating to debug, but nice once it was fixed.
 
             <div class="figwrap" id="electric_pic">
                 <figure>
-                    <img src="img/dhc_electric.jpg" alt="Blue electric harp">
+                    <img src="img/dhc_electric400.jpg" sizes=" (min-width: 700px) 40vw,
+                                (min-width: 500px) 75vw,
+                                95vw" srcset="img/dhc_electric200.jpg 200w,
+                                img/dhc_electric400.jpg 400w,
+                                img/dhc_electric.jpg 500w" alt="Blue electric harp">
                     <figcaption>
                         <a href="https://www.pacificatlanticharps.com/index.php/harps/electric-harps/item/21-camac-dhc-32-blue-light"
                             target="_blank">
@@ -418,7 +449,7 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     used with the harp. It was written by one of the most well-known jazz harpists of
                     all time.
                 </p>
-                <iframe width="702" height="478" src="https://www.youtube.com/embed/hi-nxISbbP8"
+                <iframe width="75%" height="478" src="https://www.youtube.com/embed/hi-nxISbbP8"
                     title="Baroque Flamenco (Harp)" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -439,7 +470,7 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     a difficult and incredibly expressive piece.
                 </p>
 
-                <iframe width="702" height="395" src="https://www.youtube.com/embed/UuUcQ3gXRb8"
+                <iframe width="75%" height="478" src="https://www.youtube.com/embed/UuUcQ3gXRb8"
                     title="Debussy&#39;s Danse sacrée et danse profane, featuring Gulnara Mashurova" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -460,7 +491,7 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     piece.
                 </p>
 
-                <iframe width="702" height="395" src="https://www.youtube.com/embed/OWf1P3GDiz4"
+                <iframe width="75%" height="478" src="https://www.youtube.com/embed/OWf1P3GDiz4"
                     title="Anaëlle Tourret | Contemplation for Harp (H. Renié)" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
@@ -480,7 +511,7 @@ my js code. That was frustrating to debug, but nice once it was fixed.
                     This is just a small sample of the many tunes, reels, and songs in the Celtic style.
                 </p>
 
-                <iframe width="702" height="395" src="https://www.youtube.com/embed/ZZmFhsy8QSU"
+                <iframe width="75%" height="478" src="https://www.youtube.com/embed/ZZmFhsy8QSU"
                     title="Michael Rooney plays Harp: Traditional Irish music from LiveTrad.com" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowfullscreen></iframe>
