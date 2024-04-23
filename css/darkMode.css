@@ -1,10 +1,24 @@
+/*
+Project:  Project 5
+Name: Bryn Webb
+Submitted: <Submit Date>
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+*/
+
 /* 
-New mode:
--dark mode - changes all of the background colors, font colors, and 
-font family, as well as shadow colors
--changed layout so that aside is on the right side instead of left
-in large screens, and at the very top instead of under the header
-in small screens
+Mode:
+-dark mode 
+    - changes all of the background colors, font colors, and 
+    font family, as well as shadow colors
+    -changed layout so that aside is on the right side instead of left
+    in large screens, and at the very top instead of under the header
+    in small screens
 */
 
 #body {
@@ -13,6 +27,7 @@ in small screens
     grid-template-columns: 4fr 1fr;
     grid-template-areas:
         "header header"
+        "visitor aside"
         "main aside"
         "footer footer"
     ;
@@ -54,6 +69,7 @@ header>#logo {
             "aside aside"
             "header header"
             "main main"
+            "visitor visitor"
             "footer footer"
         ;
     }
@@ -71,6 +87,7 @@ header>#logo {
             "aside"
             "header"
             "main"
+            "visitor"
             "footer"
         ;
     }

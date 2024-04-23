@@ -37,7 +37,7 @@ than the main css.
             All About Harps
         </title>
         <link rel="stylesheet" href="css/main.css">
-        <script src="js/main.js"></script>
+        <script src="js/page.js"></script>
     </head>
 
     <header id="header">
@@ -55,6 +55,7 @@ than the main css.
             <div><a href=#title onclick="typesButton()" class="types_link">Types of Harps</a></div>
             <div><a href=#title onclick="musicButton()" class="music_link">Music</a></div>
             <div><a href="#contact" class="contact_link">Contact</a></div>
+            <div><a href="#contact" onclick="visitButton()" class="visitor_button">Visit</a></div>
         </nav>
     </aside>
 
@@ -529,6 +530,86 @@ than the main css.
 
         </section>
 
+
+
     </main>
 
+    <div id="visitor">
+        <h2>
+            Thank you for visiting!<br>
+            Please sign our visitors log
+        </h2>
+        <div id="logged" class="loggedMessage" style="display:none">
+            Thank you for signing our visitors log!
+        </div>
+
+        <form id="visitform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+            <ul class="formlist">
+                <li>
+                    <label for="firstname">First Name</label>
+                    <input type="text" id="firstname" name="firstname" placeholder="Enter your first name here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="lastname">Last Name</label>
+                    <input type="text" id="lastname" name="lastname" placeholder="Enter your last name here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="address">Address</label>
+                    <input type="text" id="address" name="address" placeholder="Enter your address here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="city">City</label>
+                    <input type="text" id="city" name="city" placeholder="Enter your city here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="state">State</label>
+                    <input type="text" id="state" name="state" placeholder="Enter your state here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="zip">Zip Code</label>
+                    <input type="text" id="zip" name="zip" placeholder="Enter your zip code here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Enter your email here">
+                    <div class="errorMsg"></div>
+                </li>
+                <li>
+                    <label for="phone">Phone</label>
+                    <input type="text" id="phone" name="phone" placeholder="Enter your phone number here">
+                    <div class="errorMsg"></div>
+                </li>
+            </ul>
+
+            <p>How did you find my page?</p>
+            <ul>
+                <li>
+                    <input type="checkbox" id='google' name='find-page' value="google">
+                    <label for="google">Google</label>
+                </li>
+                <li>
+                    <input type="checkbox" id='friend' name='find-page' value="friend">
+                    <label for="friend">Friend</label>
+                </li>
+                <li>
+                    <input type="checkbox" id='socialmedia' name='find-page' value="socailmedia">
+
+                    <label for="socialmedia">Social Media</label>
+                    <div class="errorMsg"></div>
+                </li>
+            </ul>
+
+            <label for="comment">Comments</label>
+            <textarea rows="4" id="comment" placeholder="Enter your comments here"></textarea>
+        </form>
+        <button type="submit">Send</button>
+    </div>
+    <script defer src="js/validate.js"></script>
+    <script defer src="js/main.js"></script>
 </body>

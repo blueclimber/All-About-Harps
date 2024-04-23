@@ -1,63 +1,25 @@
+/*
+Project:  Project 5
+Name: Bryn Webb
+Submitted: <Submit Date>
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+*/
+
 // Changes to JS:
-// -new functions for toggling between normal mode and dark mode
+// Pulled the page switching code and mode switching code into page.js
+// Added Validate.js
+// Basic comments and documentation
+// Even listener for content loaded validation
 
-function addDarkMode() {
-    var link = document.createElement("link");
-    link.type = "text/css";
-    link.rel = "stylesheet";
-    link.href = "css/darkMode.css";
-    link.id = "darkMode";
 
-    document.head.appendChild(link);
 
-    var dark = document.getElementById("dark");
-    var light = document.getElementById("light");
+document.addEventListener("DOMContentLoaded", function () {
+    initValidation("myform");
+});
 
-    dark.style.display = "none";
-    light.style.display = "block";
-}
-
-function removeDarkMode() {
-    var head = document.head;
-    var link = document.getElementById("darkMode");
-
-    var dark = document.getElementById("dark");
-    var light = document.getElementById("light");
-
-    head.removeChild(link);
-    light.style.display = "none";
-    dark.style.display = "block";
-}
-
-function homeButton() {
-    var h = document.getElementById("home");
-    h.style.display = "flex";
-
-    var t = document.getElementById("types");
-    t.style.display = "none";
-
-    var m = document.getElementById("music");
-    m.style.display = "none";
-}
-
-function typesButton() {
-    var h = document.getElementById("home");
-    h.style.display = "none";
-
-    var t = document.getElementById("types");
-    t.style.display = "flex";
-
-    var m = document.getElementById("music");
-    m.style.display = "none";
-}
-
-function musicButton() {
-    var h = document.getElementById("home");
-    h.style.display = "none";
-
-    var t = document.getElementById("types");
-    t.style.display = "none";
-
-    var m = document.getElementById("music");
-    m.style.display = "flex";
-}
