@@ -26,6 +26,7 @@ function initValidation(formId, successId) {
     form.addEventListener("submit", submitForm);
 
 }
+
 function inputChanged(ev) {
     let el = ev.currentTarget;
     validateForm();

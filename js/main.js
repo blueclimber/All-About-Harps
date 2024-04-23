@@ -19,7 +19,6 @@ in a zero grade, a permanent record on file and possibly immediate failure of th
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    initValidation("myform");
+document.addEventListener("DOMContentLoaded", function (event) {
+    initValidation("#visitform", "#logged");
 });
-
